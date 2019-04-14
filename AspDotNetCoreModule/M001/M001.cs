@@ -8,7 +8,7 @@ namespace M001
     public class CM001 : IM001
     {
         private IServiceProvider _serviceProvider;
- 
+
 
         public CM001(IServiceProvider serviceProvider)
         {
@@ -24,13 +24,10 @@ namespace M001
             var scope = _serviceProvider.CreateScope();
             var dbx = scope.ServiceProvider.GetService<Db2Ctx>();
 
-            for (int i = 0; i < 100; i++)
-            {
-                Table1 t = new Table1 { Num1 = i, String1 = $"{i}" };
-                dbx.Table1.Add(t);
-                dbx.SaveChanges();
+            Table1 t = new Table1 { Num1 = 1, String1 = $"MOD1" };
+            dbx.Table1.Add(t);
+            dbx.SaveChanges();
 
-            }
 
 
             // get data module2
@@ -44,6 +41,6 @@ namespace M001
 
         }
 
-      
+
     }
 }

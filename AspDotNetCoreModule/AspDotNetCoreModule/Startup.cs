@@ -6,6 +6,7 @@ using DB_Db2;
 using DI;
 using M001;
 using M002;
+using MBase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -45,6 +46,10 @@ namespace AspDotNetCoreStart
 
             services.AddTransient<IM001, CM001>();
             services.AddTransient<IM002, CM002>();
+
+            services.AddTransient<IM010, CM010>();
+            services.AddTransient<IM011, CM011>();
+
 
 
         }

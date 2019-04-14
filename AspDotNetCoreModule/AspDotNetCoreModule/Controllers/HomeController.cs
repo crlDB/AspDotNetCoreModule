@@ -26,6 +26,12 @@ namespace AspDotNetCoreStart.Controllers
             var m002 = _serviceProvider.GetService<IM002>();
             var fromM002 = m002.Get(new ToM002 { Nbr1 = 100 });
 
+            var m010 = _serviceProvider.GetService<IM010>();
+            var fromM010 = m010.Get(new ToM010 { Nbr1 = 100 });
+
+            var m011 = _serviceProvider.GetService<IM011>();
+            var fromM011 = m011.Get(new ToM011 { Nbr1 = 100 });
+
             return View();
         }
    }
