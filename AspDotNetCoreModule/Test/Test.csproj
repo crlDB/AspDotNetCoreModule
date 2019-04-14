@@ -12,6 +12,7 @@
   <ItemGroup>
     <Content Include="appsettings.json">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
@@ -20,6 +21,7 @@
     <ProjectReference Include="..\DI\DI.csproj" />
     <ProjectReference Include="..\M001\M001.csproj" />
     <ProjectReference Include="..\M002\M002.csproj" />
+    <ProjectReference Include="..\MBase\MBase.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
