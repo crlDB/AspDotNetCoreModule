@@ -6,6 +6,10 @@ using M002;
 using Microsoft.EntityFrameworkCore;
 using DB_Db2;
 
+using DB_Db1;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+
 namespace Test
 {
     class Program
@@ -14,17 +18,23 @@ namespace Test
       
         static void Main(string[] args)
         {
+
+            var builder = new ConfigurationBuilder()
+                                .SetBasePath(Directory.GetCurrentDirectory())
+                                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+
+            IConfigurationRoot configuration = builder.Build();
+
             // setup our DI
             var serviceProvider = new ServiceCollection();
 
-            // .AddTransient<IM001, CM001>()
-            // .AddTransient<IM002, CM002>()
-            // .BuildServiceProvider();
+            serviceProvider.AddDbContext<Db1Ctx>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DB_Db1"),
+                b => b.MigrationsAssembly("Test")));
 
-
-            //serviceProvider.AddDbContext<Db2Ctx>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("DB_Db2"),
-            //    b => b.MigrationsAssembly("AspDotNetCoreWeb")));
+            serviceProvider.AddDbContext<Db2Ctx>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("DB_Db1"),
+                b => b.MigrationsAssembly("Test")));
 
             serviceProvider.AddTransient<IM001, CM001>();
             serviceProvider.AddTransient<IM002, CM002>();
