@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
     <ProjectReference Include="..\DB_Db2\DB_Db2.csproj" />
     <ProjectReference Include="..\DI\DI.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
 </Project>
