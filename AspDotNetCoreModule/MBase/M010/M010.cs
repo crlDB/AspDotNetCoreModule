@@ -29,6 +29,19 @@ namespace MBase
             dbx.Table1.Add(t);
             dbx.SaveChanges();
 
+            var m001 = _serviceProvider.GetService<IM001>();
+            m001.Get(new ToM001());
+
+            var m002 = _serviceProvider.GetService<IM002>();
+            m002.Get(new ToM002());
+
+
+
+
+
+
+
+
             return new FromM010 { Nbr1 = 10 };
         }
     }

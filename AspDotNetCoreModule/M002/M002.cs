@@ -25,9 +25,9 @@ namespace M002
             dbx.Table1.Add(t);
             dbx.SaveChanges();
 
-            // get data module1
-            //            IM001 m001 = _serviceProvider.GetService<IM001>();
-            //            m001.Get(new ToM001());
+            var m011 = _serviceProvider.GetService<IM011>();
+            m011.Get(new ToM011());
+
 
             return new FromM002 { Nbr1 = 10 };
         }
