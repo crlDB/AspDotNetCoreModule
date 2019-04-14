@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DB_Db1;
 using DB_Db2;
 using DI;
 using M001;
@@ -39,6 +40,10 @@ namespace AspDotNetCoreStart
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<Db1Ctx>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DB_Db1"),
+                b => b.MigrationsAssembly("AspDotNetCoreWeb")));
 
             services.AddDbContext<Db2Ctx>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DB_Db2"),

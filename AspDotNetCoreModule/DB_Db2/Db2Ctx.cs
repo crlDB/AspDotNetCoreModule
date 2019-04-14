@@ -5,6 +5,13 @@ using System.Text;
 
 namespace DB_Db2
 {
+    /// <summary>
+    /// dotnet ef migrations add MXXX -c Db2Ctx
+    /// dotnet ef database update -c Db2Ctx
+    /// 
+    /// 
+    /// </summary>
+
     public class Db2Ctx : DbContext
     {
         public Db2Ctx(DbContextOptions<Db2Ctx> options)

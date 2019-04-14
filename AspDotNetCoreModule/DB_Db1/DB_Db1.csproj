@@ -8,11 +8,4 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <ProjectReference Include="..\DB_Db1\DB_Db1.csproj" />
-    <ProjectReference Include="..\DB_Db2\DB_Db2.csproj" />
-    <ProjectReference Include="..\DI\DI.csproj" />
-  </ItemGroup>
-
 </Project>
