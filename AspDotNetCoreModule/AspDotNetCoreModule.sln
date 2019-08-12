@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspDotNetCoreStart", "AspDotNetCoreStart\AspDotNetCoreStart.csproj", "{3D481097-D3C1-4C5D-BF34-796FAED99C8E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspDotNetCoreWeb", "AspDotNetCoreModule\AspDotNetCoreWeb.csproj", "{F2FA3F88-8044-4593-949B-C8E5F6B13DE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M001", "M001\M001.csproj", "{17AD6E2E-DFE8-4A53-8569-AF0C46C02746}"
